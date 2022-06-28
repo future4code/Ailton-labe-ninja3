@@ -37,15 +37,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <header>
-
-        </header>
-        <main>
-          {this.escolheTela()}
-        </main>
-        <footer>
-
-        </footer>
+         {this.escolheTela()}
       </div>
     )
   }
