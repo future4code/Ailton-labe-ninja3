@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from '../components/Header/Header'
+import Header from "../components/Header/Header";
 
 export default class PaginaHome extends Component {
   render() {
@@ -14,10 +14,8 @@ export default class PaginaHome extends Component {
             CONTRATAR UM NINJA
           </button>
         </main>
-        
-        <footer>
 
-        </footer>
+        <footer></footer>
       </div>
     );
   }
