@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import PaginaContratar from './pages/PaginaContratar'
+import PaginaHome from './pages/PaginaHome'
+import PaginaPrestador from './pages/PaginaPrestador'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    telaAtual: 'paginaInicial'
+  }
+
+  escolheTela = () => {
+    switch(this.state.telaAtual){
+      case 'paginaInicial':
+        return <PaginaHome irPaginaContratar={this.irPaginaContratar} irPaginaPrestador={this.irPaginaPrestador}/> 
+      case 'paginaContratar':
+        return <PaginaContratar irPaginaHome={this.irPaginaHome}  />
+      case 'paginaPrestador':
+        return <PaginaPrestador irPaginaHome={this.irPaginaHome} />
+      default:
+        return <PaginaHome/> 
+    }
+  }
+
+  irPaginaContratar = () => {
+    this.setState({telaAtual: 'paginaContratar'})
+  }
+
+  irPaginaPrestador = () => {
+    this.setState({telaAtual: 'paginaPrestador'})
+  }
+
+  irPaginaHome = () => {
+    this.setState({telaAtual: 'paginaInicial'})
+  }
+
+  render() {
+    return (
+      <div>
+        <header>
+
+        </header>
+        <main>
+          {this.escolheTela()}
+        </main>
+        <footer>
+
+        </footer>
+      </div>
+    )
+  }
 }
 
 export default App;
