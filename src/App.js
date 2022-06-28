@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import Header from "./components/Header";
 import PaginaContratar from './pages/PaginaContratar'
 import PaginaHome from './pages/PaginaHome'
 import PaginaPrestador from './pages/PaginaPrestador'
@@ -41,7 +42,8 @@ class App extends React.Component {
 
         </header>
         <main>
-          {this.escolheTela()}
+        <Header escolheTela={this.escolheTela} />
+       
         </main>
         <footer>
 
