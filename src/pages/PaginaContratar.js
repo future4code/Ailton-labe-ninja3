@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class PaginaContratar extends Component {
   render() {
@@ -7,6 +7,6 @@ export default class PaginaContratar extends Component {
         PaginaContratar
         <button onClick={this.props.irPaginaHome}>Voltar</button>
       </div>
-    )
+    );
   }
 }
