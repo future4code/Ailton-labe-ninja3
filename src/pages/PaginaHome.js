@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from '../components/Header/Header'
+import Footer from "../components/Footer/Footer";
 
 export default class PaginaHome extends Component {
   render() {
@@ -13,11 +14,8 @@ export default class PaginaHome extends Component {
           <button onClick={this.props.irPaginaContratar}>
             CONTRATAR UM NINJA
           </button>
-        </main>
-        
-        <footer>
-
-        </footer>
+        </main>     
+        <Footer />    
       </div>
     );
   }
