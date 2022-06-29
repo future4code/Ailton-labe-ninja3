@@ -3,6 +3,8 @@ Estruturação do projeto
 ![Fluxograma](https://user-images.githubusercontent.com/38039737/176336242-cdb1128a-525d-4f93-b82f-3c01908013df.png)
 
 
+Solicitação da estrutura e de acordo com as necessidades do cliente.
+
 **Home**
 
 **Header**
