@@ -4,6 +4,7 @@ import PaginaContratar from './pages/PaginaContratar'
 import PaginaHome from './pages/PaginaHome'
 import PaginaPrestador from './pages/PaginaPrestador'
 import CartCard from './components/CartCard/CartCard'
+import axios from "axios";
 
 class App extends React.Component {
   state = {

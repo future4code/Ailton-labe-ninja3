@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "../components/Header/Header";
+import axios from "axios";
 
 export default class PaginaContratar extends Component {
   render() {
