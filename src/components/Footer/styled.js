@@ -7,7 +7,7 @@ export const Box = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 23%;
+  height: 22%;
 
   
    
@@ -15,6 +15,10 @@ export const Box = styled.div`
     padding: 70px 30px;
   }
 `;
+
+// export const Cabeca = styled.h1`
+// font-size: 10px,
+// `;
    
 export const Container = styled.div`
     display: flex;
@@ -36,7 +40,7 @@ export const Row = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, 
                          minmax(185px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 50px;
    
   @media (max-width: 1000px) {
     grid-template-columns: repeat(auto-fill, 

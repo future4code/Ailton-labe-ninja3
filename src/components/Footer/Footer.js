@@ -14,9 +14,10 @@ const Footer = () => {
   return (
     <Box>
       <h1 style={{ color: "black", 
-                   textAlign: "center", 
-                   marginTop: "-60px" }}>
-        Oi eu sou o Footer!
+                   textAlign: "left", 
+                   marginTop: "-70px",
+                    }}>
+        LabeNinjas
       </h1>
       <Container>
         <Row>
