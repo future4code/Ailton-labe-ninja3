@@ -50,7 +50,7 @@ Estrutura de acordo com as necessidades e solicitação do cliente.
 - Botão finalizar compra
 - Botão para voltar para lista de serviço ( continuar comprando)
 
-‌
+‌Projeção e espectativa de como o projeto será entregue até a data pré estabelecida. 
 
 ![1](https://user-images.githubusercontent.com/38039737/176337032-8e033f3f-0988-465d-a3ba-856736454046.png)
 ![2](https://user-images.githubusercontent.com/38039737/176337036-d6422d7e-2cc0-4cd4-9d18-5b8e15ad53e0.png)
