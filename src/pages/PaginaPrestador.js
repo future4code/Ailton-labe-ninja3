@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-
+import Header from "../components/Header/Header";
 export default class PaginaPrestador extends Component {
   render() {
     return (
       <div>
-        <header></header>
+        <Header/>
         <main>
           <h1>Cadastre o seu serviço</h1>
           <input placeholder="Titulo *" />

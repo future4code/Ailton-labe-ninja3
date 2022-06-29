@@ -1,14 +1,41 @@
-import React from "react"
-import { Card } from "./styled"
+import React, { Component } from 'react'
+import { Card } from "./styled";
 
-const CartCard = (props) => {
+export default class CartCard extends Component {
+    state = {
+        cart: []
+      };
+    
+      addToCart = (job) => {
+        const newCart = [...this.state.cart, job];
+        this.setState({ cart: newCart });
+        alert(`O serviço ${job.title} foi adicionado ao carrinho`);
+      };
+    
+      removeFromCart = (id) => {
+        const canDelete = window.confirm(
+          "Tem certeza que deseja remover este produto?"
+        );
+        if (canDelete) {
+          const newCart = this.state.cart.filter((cartItem) => {
+            return cartItem.id !== id;
+          });
+          this.setState({ cart: newCart });
+        }
+      };
+    
+      clearCart = () => {
+        this.setState({ cart: [] });
+        alert("Obrigada por comprar com a gente!");
+      };
+    
+  render() {
     return (
         <Card>
-            <h3>{props.title}</h3>
-            <p>R${props.price.toFixed(2)}</p>
-            <button onClick={() => props.removeFromCart(props.id)}>Remover</button>
-        </Card>
+        <h3></h3>
+        <p>R$</p>
+        <button>Remover</button>
+      </Card>
     )
+  }
 }
-
-export default CartCard
