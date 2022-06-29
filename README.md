@@ -1,3 +1,4 @@
+
 Estruturação do projeto 
 
 ![Fluxograma](https://user-images.githubusercontent.com/38039737/176336242-cdb1128a-525d-4f93-b82f-3c01908013df.png)
@@ -51,7 +52,11 @@ Estrutura de acordo com as necessidades e solicitação do cliente.
 
 ‌
 
-
+![1](https://user-images.githubusercontent.com/38039737/176337032-8e033f3f-0988-465d-a3ba-856736454046.png)
+![2](https://user-images.githubusercontent.com/38039737/176337036-d6422d7e-2cc0-4cd4-9d18-5b8e15ad53e0.png)
+![3](https://user-images.githubusercontent.com/38039737/176337038-2d90edee-11dc-4a67-a238-91ecdffb82b6.png)
+![4](https://user-images.githubusercontent.com/38039737/176337040-294c0400-6470-4708-8f74-41d62d0422ca.png)
+![5](https://user-images.githubusercontent.com/38039737/176337041-87d7f63c-afee-4167-a383-b5d563202dc2.png)
 
 
 ‌
