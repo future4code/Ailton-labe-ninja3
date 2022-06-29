@@ -3,10 +3,12 @@ import './App.css'
 import PaginaContratar from './pages/PaginaContratar'
 import PaginaHome from './pages/PaginaHome'
 import PaginaPrestador from './pages/PaginaPrestador'
+import CartCard from './components/CartCard/CartCard'
 
 class App extends React.Component {
   state = {
-    telaAtual: 'paginaInicial'
+    telaAtual: 'paginaInicial';
+    cart: []
   }
 
   escolheTela = () => {
@@ -33,6 +35,28 @@ class App extends React.Component {
   irPaginaHome = () => {
     this.setState({telaAtual: 'paginaInicial'})
   }
+
+  addToCart = (job) => {
+    const newCart = [...this.state.cart, job]
+    this.setState({cart: newCart})
+    alert(`O serviço ${job.title} foi adicionado ao carrinho`)
+  }
+
+  removeFromCart = (id) => {
+    const canDelete = window.confirm("Tem certeza que deseja remover este produto?")
+    if (canDelete){
+      const newCart = this.state.cart.filter((cartItem) => {
+        return cartItem.id !== id
+      })
+      this.setState({cart: newCart})
+    }
+  }
+
+  clearCart = () => {
+    this.setState({cart: []})
+    alert("Obrigada por comprar com a gente!")
+  }
+
 
   render() {
     return (
