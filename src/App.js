@@ -7,10 +7,11 @@ import CartCard from './components/CartCard/CartCard'
 import axios from "axios";
 import Header from "./components/Header/Header"
 
+
 class App extends React.Component {
   state = {
-    telaAtual: 'paginaInicial'
-  }
+    telaAtual: "paginaInicial",
+  };
 
   escolheTela = () => {
     switch(this.state.telaAtual){
@@ -21,22 +22,26 @@ class App extends React.Component {
       case 'paginaPrestador':
         return <PaginaPrestador irPaginaHome={this.irPaginaHome} />
       default:
-        return <PaginaHome/> 
+        return (
+          <PaginaHome
+            irPaginaContratar={this.irPaginaContratar}
+            irPaginaPrestador={this.irPaginaPrestador}
+          />
+        );
     }
-  }
+  };
 
   irPaginaContratar = () => {
-    this.setState({telaAtual: 'paginaContratar'})
-  }
+    this.setState({ telaAtual: "paginaContratar" });
+  };
 
   irPaginaPrestador = () => {
-    this.setState({telaAtual: 'paginaPrestador'})
-  }
+    this.setState({ telaAtual: "paginaPrestador" });
+  };
 
   irPaginaHome = () => {
-    this.setState({telaAtual: 'paginaInicial'})
-  }
-
+    this.setState({ telaAtual: "paginaInicial" });
+  };
 
   render() {
     return (
