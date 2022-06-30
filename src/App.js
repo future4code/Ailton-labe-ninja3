@@ -5,6 +5,7 @@ import PaginaHome from './pages/PaginaHome'
 import PaginaPrestador from './pages/PaginaPrestador'
 import CartCard from './components/CartCard/CartCard'
 import axios from "axios";
+import Header from "./components/Header/Header"
 
 class App extends React.Component {
   state = {
@@ -14,7 +15,7 @@ class App extends React.Component {
   escolheTela = () => {
     switch(this.state.telaAtual){
       case 'paginaInicial':
-        return <PaginaHome irPaginaContratar={this.irPaginaContratar} irPaginaPrestador={this.irPaginaPrestador}/> 
+        return <PaginaHome irPaginaHome={this.irPaginaHome} irPaginaContratar={this.irPaginaContratar} irPaginaPrestador={this.irPaginaPrestador}/> 
       case 'paginaContratar':
         return <PaginaContratar irPaginaHome={this.irPaginaHome}  />
       case 'paginaPrestador':
@@ -40,6 +41,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+         <Header irPaginaHome={this.irPaginaHome}/>
          {this.escolheTela()}
       </div>
     )
