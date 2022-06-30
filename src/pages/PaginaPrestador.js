@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "../components/Header/Header";
 import axios from "axios";
 import {baseURL} from '../constants/urls';
-import Card from '../components/Card';
+import Card from '../components/Card/Card'
 
 export default class PaginaPrestador extends Component {
   getAllJobs = () => {
@@ -29,10 +29,10 @@ export default class PaginaPrestador extends Component {
       <div>
         <Header />
         <main>
-
+     
 
           <h1>Cadastre o seu serviço</h1>
-          <Card/>
+        <Card/>
           <button onClick={this.props.irPaginaHome}>Voltar</button>
         </main>
       </div>
