@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import {
@@ -8,25 +7,27 @@ import {
   Column,
   FooterLink,
   Heading,
+  Infos
+
 } from "./styled.js";
-  
+
 const Footer = () => {
   return (
     <Box>
-      <h1 style={{ color: "black", 
+      {/* <h1 style={{ color: "black", 
                    textAlign: "left", 
                    marginTop: "-70px",
                     }}>
         LabeNinjas
-      </h1>
+      </h1> */}
       <Container>
         <Row>
           <Column>
             <Heading>Serviços</Heading>
-            <FooterLink href="#">Blabla</FooterLink>
-            <FooterLink href="#">Blabla</FooterLink>
-            <FooterLink href="#">blablabla</FooterLink>
-            <FooterLink href="#">blablabla</FooterLink>
+            <FooterLink href="#">Assistência Técnica</FooterLink>
+            <FooterLink href="#">Aulas</FooterLink>
+            <FooterLink href="#">Autos</FooterLink>
+            <FooterLink href="#">Tecnologia</FooterLink>
           </Column>
           <Column>
             <Heading>Contate-nos</Heading>
@@ -67,8 +68,18 @@ const Footer = () => {
               </i>
             </FooterLink>
           </Column>
+          {/* <Column>
+            <Heading>Downloads</Heading>
+           <Playstore /> 
+
+          </Column> */}
         </Row>
       </Container>
+      <Infos>
+        ©2022, LabeNinjas Serviços de Internet. CNPJ 12.265.787/0001-00 -
+        Address: 7007 Sea World Dr, Orlando, Fl 32821, Estados Unidos.
+      </Infos>
+
     </Box>
   );
 };
