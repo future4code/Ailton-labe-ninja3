@@ -6,7 +6,6 @@ export default class PaginaHome extends Component {
   render() {
     return (
       <div>
-        <Header />
         <main>
           <button onClick={this.props.irPaginaPrestador}>
             QUERO SER UM NINJA
