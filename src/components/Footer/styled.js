@@ -1,12 +1,13 @@
 import styled from 'styled-components';
-   
+
 export const Box = styled.div`
-  padding: 70px 60px;
-  background: gray;
+  border: 1px solid blue;
+  padding: 20px;
+  background: white;
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 22%;
+  height: 24%;
 
   
    
@@ -18,7 +19,7 @@ export const Box = styled.div`
 // export const Cabeca = styled.h1`
 // font-size: 10px,
 // `;
-   
+
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -27,41 +28,45 @@ export const Container = styled.div`
     margin: auto ;
     /* background: red; */
 `
-   
+
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-left: 60px;
 `;
-   
+
 export const Row = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, 
                          minmax(185px, 1fr));
-  grid-gap: 50px;
+  grid-gap: 139px;
    
   @media (max-width: 1000px) {
     grid-template-columns: repeat(auto-fill, 
                            minmax(300px, 1fr));
   }
 `;
-   
+
 export const FooterLink = styled.a`
-  color: #fff;
+  color: rgba(46, 86, 229, 0.8);
   margin-bottom: 5px;
   font-size: 18px;
   text-decoration: none;
    
   &:hover {
-      color: yellow;
+      color: blue;
       transition: 200ms ease-in;
   }
 `;
-   
+
 export const Heading = styled.p`
   font-size: 24px;
-  color: #fff;
+  color: black;
   margin-bottom: 10px;
   font-weight: bold;
 `;
+
+export const Infos = styled.div`
+text-align: center;
+`
