@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class Card extends Component {
 
@@ -39,9 +39,19 @@ export default class Card extends Component {
         return (
             <div>
 
-                <input value={this.state.cargo} onChange={this.state.pegaValorCargo} placeholder="Cargo" />
-                <input value={this.state.descricao} onChange={this.state.pegaValorDescricao} placeholder="Descrição *" />
-                <input value={this.state.pagamento} onChange={this.state.pegaValorPagamento} type="number" />
+                <input value={this.state.cargo}
+                onChange={this.state.pegaValorCargo}
+                placeholder="Cargo" />
+
+                <input value={this.state.descricao}
+                onChange={this.state.pegaValorDescricao}
+                placeholder="Descrição *" />
+
+                <input
+                value={this.state.pagamento} 
+                onChange={this.state.pegaValorPagamento} 
+                type="number" />
+
                 <select>
                     <option>Cartão de Crédito</option>
                     <option>Cartão de Débito</option>
@@ -49,7 +59,11 @@ export default class Card extends Component {
                     <option>PayPal</option>
                     <option>Boleto</option>
                 </select>
-                <input value={this.state.data} onChange={this.state.pegaValorData} type="date" />
+                <input 
+                value={this.state.data} 
+                onChange={this.state.pegaValorData} 
+                type="date" />
+                
                 <button type="submit">Enviar</button>
 
             </div>

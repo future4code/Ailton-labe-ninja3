@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "../components/Header/Header";
 import axios from "axios";
 import {baseURL} from '../constants/urls';
-import Card from '../components/Card/Card'
+import Card from '../components/Card/Card';
 
 export default class PaginaPrestador extends Component {
   getAllJobs = () => {
