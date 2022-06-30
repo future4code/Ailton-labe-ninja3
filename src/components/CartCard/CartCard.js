@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Card } from "./styled";
+import Cartao from "./styled";
 
 export default class CartCard extends Component {
     state = {
@@ -31,11 +31,11 @@ export default class CartCard extends Component {
     
   render() {
     return (
-        <Card>
+        <div>
         <h3></h3>
         <p>R$</p>
         <button>Remover</button>
-      </Card>
+        </div>
     )
   }
 }

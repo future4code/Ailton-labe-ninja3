@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Card = styled.div`
+export const Cartao = styled.div`
     border: 1px solid black;
     background-color: lightgray;
     margin: 12px;
