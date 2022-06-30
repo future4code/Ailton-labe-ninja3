@@ -70,7 +70,6 @@ render() {
 
   return (
     <div>
-      <Header />
       <main>
 
         <h1>Cadastre o seu serviço</h1>
