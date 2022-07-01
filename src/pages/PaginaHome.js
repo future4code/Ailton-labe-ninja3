@@ -9,7 +9,7 @@ export default class PaginaHome extends Component {
       <div>
         <Conteudo>
           
-          <h1>LABENINJAS</h1>
+          <H1>LABENINJAS</H1>
           <TextoApresentacao>
             Nossa missão: tornar a conexão entre contratantes e prestadores
             de serviço mais ágil e eficiente. Nossa visão: tornarmo-nos a maior
@@ -37,13 +37,19 @@ export default class PaginaHome extends Component {
 }
 const Conteudo =styled.div `
 background-image: url(${background});
-width: 100vw;
+background-repeat: no-repeat;
+background-size: cover;
+width: 100%;
 height: 100vh;
 align-content: center;
 `
 const TextoApresentacao = styled.div`
 width: 500px;
 text-align: center;
+color: white;
+`
+
+const H1 = styled.div`
 color: white;
 `
 const Botoes = styled.div`
