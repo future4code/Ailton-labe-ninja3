@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
+import Footer from "../components/Footer/Footer";
 
 export default class PaginaContratar extends Component {
   state = {
@@ -56,6 +57,7 @@ export default class PaginaContratar extends Component {
         </select>
         <TodosCards>{mostraJobs}</TodosCards>
         <button className ="botaoHeader" onClick={this.props.irPaginaHome}>Voltar</button>
+        <Footer /> 
       </div>
     );
   }

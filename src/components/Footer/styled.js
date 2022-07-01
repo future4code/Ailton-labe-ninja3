@@ -1,19 +1,14 @@
 import styled from 'styled-components';
 
 export const Box = styled.div`
-  border: 1px solid blue;
+  //border: 1px solid blue;
   padding: 20px;
-  background: white;
+  background: #264653;
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 24%;
 
-  
-   
-  @media (max-width: 1000px) {
-    padding: 70px 30px;
-  }
 `;
 
 // export const Cabeca = styled.h1`
@@ -26,7 +21,6 @@ export const Container = styled.div`
     justify-content: center;
     max-width: 1000px;
     margin: auto ;
-    /* background: red; */
 `
 
 export const Column = styled.div`
@@ -49,24 +43,25 @@ export const Row = styled.div`
 `;
 
 export const FooterLink = styled.a`
-  color: rgba(46, 86, 229, 0.8);
+  color: orange;
   margin-bottom: 5px;
   font-size: 18px;
   text-decoration: none;
    
   &:hover {
-      color: blue;
+      color: yellow;
       transition: 200ms ease-in;
   }
 `;
 
 export const Heading = styled.p`
   font-size: 24px;
-  color: black;
+  color: white;
   margin-bottom: 10px;
   font-weight: bold;
 `;
 
 export const Infos = styled.div`
 text-align: center;
+color: white
 `
