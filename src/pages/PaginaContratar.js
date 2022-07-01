@@ -6,6 +6,7 @@ import Footer from "../components/Footer/Footer";
 export default class PaginaContratar extends Component {
   state = {
     job: [],
+    carrinho: []
   };
 
   getAllJobs = () => {
@@ -28,7 +29,16 @@ export default class PaginaContratar extends Component {
   componentDidMount() {
     this.getAllJobs();
   }
-
+  
+  adicionaItensCarrinho = () => {
+    const novoArray = [...this.state.job]
+    novoArray = novoArray.filter((item) =>
+    {
+      return 
+       
+    })
+  }
+  
   render() {
     const mostraJobs = this.state.job.map((trabalho) => {
       return (
@@ -43,8 +53,9 @@ export default class PaginaContratar extends Component {
       );
     });
 
+ 
     return (
-      <div>
+      <ConteudoTodosCards>
         <input placeholder="Valor Mínimo"></input>
         <input placeholder="Valor Máximo"></input>
         <input placeholder="Busca por título ou descrição"></input>
@@ -56,15 +67,16 @@ export default class PaginaContratar extends Component {
           <option>Prazo</option>
         </select>
         <TodosCards>{mostraJobs}</TodosCards>
-        <button className ="botaoHeader" onClick={this.props.irPaginaHome}>Voltar</button>
-        <Footer /> 
-      </div>
+        <button className ="botaoHeader" onClick={this.props.irPaginaHome}>Voltar</button> 
+      </ConteudoTodosCards>
     );
   }
 }
 
 const TodosCards = styled.div`
   display: flex;
+  flex-wrap:wrap ;
+  justify-content: center;
   gap: 12px;
 `;
 
@@ -76,3 +88,6 @@ const DivCard = styled.div`
   width: 250px;
   background-color: lightgrey;
 `;
+const ConteudoTodosCards = styled.div`
+
+`

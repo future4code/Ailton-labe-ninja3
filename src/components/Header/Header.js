@@ -10,7 +10,7 @@ class Header extends React.Component {
             <h1>LabeNinjas</h1>
             <div>
                 <button className ="botaoHeader" onClick={this.props.irPaginaHome}>Home</button>
-                <button className ="botaoHeader" >Carrinho</button>
+                <button className ="botaoHeader" onClick={this.props.irPaginaCarrinho}>Carrinho</button>
             </div>
         </HeaderContainer>
     )

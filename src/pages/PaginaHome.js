@@ -21,7 +21,7 @@ export default class PaginaHome extends Component {
             Venha, mostre seu potencial, amplie seu networking e faça parte
             dessa rede brasileira de ninjas!
           </TextoApresentacao>
-<Botoes>
+          <Botoes>
           <button className="botao" onClick={this.props.irPaginaPrestador}>
             QUERO SER UM NINJA
           </button>
@@ -29,8 +29,7 @@ export default class PaginaHome extends Component {
             CONTRATAR UM NINJA
           </button>
           </Botoes>
-        </Conteudo>
-        <Footer />
+          </Conteudo>
       </div>
     );
   }

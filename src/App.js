@@ -6,6 +6,9 @@ import PaginaPrestador from './pages/PaginaPrestador'
 import CartCard from './components/CartCard/CartCard'
 import axios from "axios";
 import Header from "./components/Header/Header"
+import Footer from "./components/Footer/Footer"
+import PaginaCarrinho from './pages/PaginaCarrinho'
+import { toHaveStyle } from '@testing-library/jest-dom/dist/matchers'
 
 
 class App extends React.Component {
@@ -21,6 +24,8 @@ class App extends React.Component {
         return <PaginaContratar irPaginaHome={this.irPaginaHome}  />
       case 'paginaPrestador':
         return <PaginaPrestador irPaginaHome={this.irPaginaHome} />
+      case 'paginaCarrinho':
+        return <PaginaCarrinho />
       default:
         return (
           <PaginaHome
@@ -43,12 +48,18 @@ class App extends React.Component {
     this.setState({ telaAtual: "paginaInicial" });
   };
 
+  irPaginaCarrinho = () => {
+    this.setState({ telaAtual: "paginaCarrinho" });
+  };
+
   render() {
     return (
       <div>
-         <Header irPaginaHome={this.irPaginaHome}/>
+         <Header irPaginaHome={this.irPaginaHome} irPaginaCarrinho={this.irPaginaCarrinho}/>
          {this.escolheTela()}
+         <Footer/>
       </div>
+
     )
   }
 }
