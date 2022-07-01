@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Footer from "../components/Footer/Footer";
 import styled from "styled-components";
 import background from "../components/background.jpg"
 
@@ -8,7 +7,7 @@ export default class PaginaHome extends Component {
     return (
       <div>
         <Conteudo>
-          
+
           <H1>LABENINJAS</H1>
           <TextoApresentacao>
             Nossa missão: tornar a conexão entre contratantes e prestadores
@@ -22,19 +21,19 @@ export default class PaginaHome extends Component {
             dessa rede brasileira de ninjas!
           </TextoApresentacao>
           <Botoes>
-          <button className="botao" onClick={this.props.irPaginaPrestador}>
-            QUERO SER UM NINJA
-          </button>
-          <button className="botao" onClick={this.props.irPaginaContratar}>
-            CONTRATAR UM NINJA
-          </button>
+            <button className="botao" onClick={this.props.irPaginaPrestador}>
+              QUERO SER UM NINJA
+            </button>
+            <button className="botao" onClick={this.props.irPaginaContratar}>
+              CONTRATAR UM NINJA
+            </button>
           </Botoes>
-          </Conteudo>
+        </Conteudo>
       </div>
     );
   }
 }
-const Conteudo =styled.div `
+const Conteudo = styled.div`
 background-image: url(${background});
 background-repeat: no-repeat;
 background-size: cover;

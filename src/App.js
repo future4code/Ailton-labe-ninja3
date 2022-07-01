@@ -19,6 +19,16 @@ class App extends React.Component {
     job: []
   };
 
+  removerItensCarrinho = (id) => {
+    const retirarTrabalhos = [...this.state.carrinho]
+    const novoArrayRetirarCarrinho = retirarTrabalhos.filter((itens) => {
+      const deleta = itens.id !== id
+      return deleta
+    })
+    const carrinhoSemItem = [...novoArrayRetirarCarrinho]
+    this.setState({carrinho: carrinhoSemItem})
+  }
+
   adicionaItensCarrinho = (user) => {
     const addTrabalhos = [...this.state.job]
     const novoArray = addTrabalhos.filter((itens) => {
@@ -26,8 +36,8 @@ class App extends React.Component {
       return res
     })
     const novoCarrinho = [...this.state.carrinho, ...novoArray]
-    this.setState({carrinho: novoCarrinho})
-    
+    this.setState({ carrinho: novoCarrinho })
+
   }
 
   getAllJobs = () => {
@@ -48,9 +58,9 @@ class App extends React.Component {
   };
 
   escolheTela = () => {
-    switch(this.state.telaAtual){
+    switch (this.state.telaAtual) {
       case 'paginaInicial':
-        return <PaginaHome irPaginaHome={this.irPaginaHome} irPaginaContratar={this.irPaginaContratar} irPaginaPrestador={this.irPaginaPrestador}/> 
+        return <PaginaHome irPaginaHome={this.irPaginaHome} irPaginaContratar={this.irPaginaContratar} irPaginaPrestador={this.irPaginaPrestador} />
       case 'paginaContratar':
         return <PaginaContratar irPaginaDetalhes={this.irPaginaDetalhes} irPaginaHome={this.irPaginaHome} 
         adicionaItensCarrinho={this.adicionaItensCarrinho}
@@ -62,6 +72,7 @@ class App extends React.Component {
         return <PaginaCarrinho carrinho={this.state.carrinho} />
       case 'paginaDetalhes':
         return <PaginaDetalhes  />
+
       default:
         return (
           <PaginaHome
@@ -93,11 +104,12 @@ class App extends React.Component {
   };
 
   render() {
+  
     return (
       <div>
-         <Header irPaginaHome={this.irPaginaHome} irPaginaCarrinho={this.irPaginaCarrinho}/>
-         {this.escolheTela()}
-         <Footer/>
+        <Header irPaginaHome={this.irPaginaHome} irPaginaCarrinho={this.irPaginaCarrinho} />
+        {this.escolheTela()}
+        <Footer />
       </div>
 
     )
