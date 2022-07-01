@@ -1,15 +1,36 @@
 import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
-import Footer from "../components/Footer/Footer";
 
 export default class PaginaContratar extends Component {
+  state = {
+    filtroMinimo: "",
+    filtroMaximo: "",
+    filtroNome: ""
+  }
 
   componentDidMount() {
     this.props.getAllJobs();
   }
-  
-  
+
+  pegaValorFiltroMin = (event) => {
+    this.setState({
+      filtroMinimo: event.target.value
+    })
+  }
+
+  pegaValorFiltroMax = (event) => {
+    this.setState({
+      filtroMaximo: event.target.value
+    })
+  }
+
+  pegaValorFiltroNome = (event) => {
+    this.setState({
+      filtroNome: event.target.value
+    })
+  }
+
   render() {
     const mostraJobs = this.props.job.map((trabalho) => {
       return (
@@ -24,7 +45,7 @@ export default class PaginaContratar extends Component {
       );
     });
 
- 
+
     return (
       <div>
         <input placeholder="Valor Mínimo"></input>
@@ -38,7 +59,7 @@ export default class PaginaContratar extends Component {
           <option>Prazo</option>
         </select>
         <TodosCards>{mostraJobs}</TodosCards>
-        <button className ="botaoHeader" onClick={this.props.irPaginaHome}>Voltar</button> 
+        <button className="botaoHeader" onClick={this.props.irPaginaHome}>Voltar</button>
       </div>
     );
   }
@@ -46,7 +67,7 @@ export default class PaginaContratar extends Component {
 
 const TodosCards = styled.div`
   display: flex;
-  flex-wrap:wrap ;
+  flex-wrap: wrap ;
   justify-content: center;
   gap: 12px;
 `;
