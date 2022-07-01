@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 import axios from "axios";
 import styled from "styled-components"
 
@@ -103,14 +101,14 @@ export default class PaginaPrestador extends Component {
             type="date"
           />
 
-          <button className ="botaoHeader" onClick={this.postJobs}>Enviar</button>
+          <button className="botaoHeader" onClick={this.postJobs}>Enviar</button>
 
-          <button className ="botaoHeader" onClick={this.props.irPaginaHome}>Voltar</button>
+          <button className="botaoHeader" onClick={this.props.irPaginaHome}>Voltar</button>
         </CadastroServicos>
       </div>
     );
   }
-  
+
 }
 
 const CadastroServicos = styled.div`
