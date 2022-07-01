@@ -9,6 +9,7 @@ import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
 import PaginaCarrinho from './pages/PaginaCarrinho'
 import { toHaveStyle } from '@testing-library/jest-dom/dist/matchers'
+import PaginaDetalhes from './pages/PaginaDetalhes'
 
 
 class App extends React.Component {
@@ -51,7 +52,7 @@ class App extends React.Component {
       case 'paginaInicial':
         return <PaginaHome irPaginaHome={this.irPaginaHome} irPaginaContratar={this.irPaginaContratar} irPaginaPrestador={this.irPaginaPrestador}/> 
       case 'paginaContratar':
-        return <PaginaContratar irPaginaHome={this.irPaginaHome} 
+        return <PaginaContratar irPaginaDetalhes={this.irPaginaDetalhes} irPaginaHome={this.irPaginaHome} 
         adicionaItensCarrinho={this.adicionaItensCarrinho}
         getAllJobs={this.getAllJobs} 
         job={this.state.job}/>
@@ -59,6 +60,8 @@ class App extends React.Component {
         return <PaginaPrestador irPaginaHome={this.irPaginaHome} />
       case 'paginaCarrinho':
         return <PaginaCarrinho carrinho={this.state.carrinho} />
+      case 'paginaDetalhes':
+        return <PaginaDetalhes  />
       default:
         return (
           <PaginaHome
@@ -83,6 +86,10 @@ class App extends React.Component {
 
   irPaginaCarrinho = () => {
     this.setState({ telaAtual: "paginaCarrinho" });
+  };
+
+  irPaginaDetalhes = () => {
+    this.setState({ telaAtual: "paginaDetalhes" });
   };
 
   render() {
