@@ -4,43 +4,14 @@ import styled from "styled-components";
 import Footer from "../components/Footer/Footer";
 
 export default class PaginaContratar extends Component {
-  state = {
-    job: [],
-    carrinho: []
-  };
-
-  getAllJobs = () => {
-    axios
-      .get("https://labeninjas.herokuapp.com/jobs", {
-        headers: {
-          Authorization: "e537021a-ccc6-4427-a00f-e0a8e2d88c59",
-        },
-      })
-      .then((response) => {
-        this.setState({
-          job: response.data.jobs,
-        });
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
-  };
 
   componentDidMount() {
-    this.getAllJobs();
+    this.props.getAllJobs();
   }
   
-  adicionaItensCarrinho = () => {
-    const novoArray = [...this.state.job]
-    novoArray = novoArray.filter((item) =>
-    {
-      return 
-       
-    })
-  }
   
   render() {
-    const mostraJobs = this.state.job.map((trabalho) => {
+    const mostraJobs = this.props.job.map((trabalho) => {
       return (
         <DivCard key={trabalho.id}>
           <p>{trabalho.title}</p>
@@ -48,14 +19,14 @@ export default class PaginaContratar extends Component {
           <p>{trabalho.dueDate}</p>
 
           <button>Ver detalhes</button>
-          <button>Adicionar ao carrinho</button>
+          <button onClick={() => this.props.adicionaItensCarrinho(trabalho.id)}>Adicionar ao carrinho</button>
         </DivCard>
       );
     });
 
  
     return (
-      <ConteudoTodosCards>
+      <div>
         <input placeholder="Valor Mínimo"></input>
         <input placeholder="Valor Máximo"></input>
         <input placeholder="Busca por título ou descrição"></input>
@@ -68,7 +39,7 @@ export default class PaginaContratar extends Component {
         </select>
         <TodosCards>{mostraJobs}</TodosCards>
         <button className ="botaoHeader" onClick={this.props.irPaginaHome}>Voltar</button> 
-      </ConteudoTodosCards>
+      </div>
     );
   }
 }
@@ -88,6 +59,3 @@ const DivCard = styled.div`
   width: 250px;
   background-color: lightgrey;
 `;
-const ConteudoTodosCards = styled.div`
-
-`

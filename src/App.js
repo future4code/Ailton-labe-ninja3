@@ -14,6 +14,36 @@ import { toHaveStyle } from '@testing-library/jest-dom/dist/matchers'
 class App extends React.Component {
   state = {
     telaAtual: "paginaInicial",
+    carrinho: [],
+    job: []
+  };
+
+  adicionaItensCarrinho = (user) => {
+    const addTrabalhos = [...this.state.job]
+    const novoArray = addTrabalhos.filter((itens) => {
+      const res = itens.id === user
+      return res
+    })
+    const novoCarrinho = [...this.state.carrinho, ...novoArray]
+    this.setState({carrinho: novoCarrinho})
+    
+  }
+
+  getAllJobs = () => {
+    axios
+      .get("https://labeninjas.herokuapp.com/jobs", {
+        headers: {
+          Authorization: "e537021a-ccc6-4427-a00f-e0a8e2d88c59",
+        },
+      })
+      .then((response) => {
+        this.setState({
+          job: response.data.jobs,
+        });
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
 
   escolheTela = () => {
@@ -21,11 +51,14 @@ class App extends React.Component {
       case 'paginaInicial':
         return <PaginaHome irPaginaHome={this.irPaginaHome} irPaginaContratar={this.irPaginaContratar} irPaginaPrestador={this.irPaginaPrestador}/> 
       case 'paginaContratar':
-        return <PaginaContratar irPaginaHome={this.irPaginaHome}  />
+        return <PaginaContratar irPaginaHome={this.irPaginaHome} 
+        adicionaItensCarrinho={this.adicionaItensCarrinho}
+        getAllJobs={this.getAllJobs} 
+        job={this.state.job}/>
       case 'paginaPrestador':
         return <PaginaPrestador irPaginaHome={this.irPaginaHome} />
       case 'paginaCarrinho':
-        return <PaginaCarrinho />
+        return <PaginaCarrinho carrinho={this.state.carrinho} />
       default:
         return (
           <PaginaHome
