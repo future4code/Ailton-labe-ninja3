@@ -55,7 +55,7 @@ export default class PaginaContratar extends Component {
           <option>Prazo</option>
         </select>
         <TodosCards>{mostraJobs}</TodosCards>
-        <button onClick={this.props.irPaginaHome}>Voltar</button>
+        <button className ="botaoHeader" onClick={this.props.irPaginaHome}>Voltar</button>
       </div>
     );
   }
@@ -72,5 +72,5 @@ const DivCard = styled.div`
   padding: 4px;
   height: 200px;
   width: 250px;
-  background-color: #f4a261;
+  background-color: lightgrey;
 `;
