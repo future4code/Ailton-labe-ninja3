@@ -39,7 +39,7 @@ export default class PaginaContratar extends Component {
           <p>{trabalho.price}</p>
           <p>{trabalho.dueDate}</p>
 
-          <button>Ver detalhes</button>
+          <button onClick={this.props.irPaginaDetalhes}>Ver detalhes</button>
           <button onClick={() => this.props.adicionaItensCarrinho(trabalho.id)}>Adicionar ao carrinho</button>
         </DivCard>
       );
