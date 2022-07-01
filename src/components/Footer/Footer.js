@@ -40,7 +40,7 @@ const Footer = () => {
           <Column>
             <Heading>Social Media</Heading>
             <FooterLink href="https://github.com/future4code/Ailton-labe-ninja3">
-              <i className="fab fa-twitter">
+              <i className="fab fa-github">
                 <span style={{ marginLeft: "10px" }}>
                   GitHub
                 </span>
