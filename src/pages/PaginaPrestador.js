@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import styled from "styled-components"
 
 export default class PaginaPrestador extends Component {
   state = {
@@ -60,7 +61,7 @@ export default class PaginaPrestador extends Component {
   render() {
     return (
       <div>
-        <main>
+        <CadastroServicos>
           <h1>Cadastre o seu serviço</h1>
 
           <input
@@ -100,11 +101,21 @@ export default class PaginaPrestador extends Component {
             type="date"
           />
 
-          <button onClick={this.postJobs}>Enviar</button>
+          <button className ="botaoHeader" onClick={this.postJobs}>Enviar</button>
 
-          <button onClick={this.props.irPaginaHome}>Voltar</button>
-        </main>
+          <button className ="botaoHeader" onClick={this.props.irPaginaHome}>Voltar</button>
+        </CadastroServicos>
       </div>
     );
   }
+  
 }
+
+const CadastroServicos = styled.div`
+display: flex;
+flex-direction: column;
+width: 100vw;
+height: 600px;
+gap: 8px;
+align-items: center;
+`

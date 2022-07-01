@@ -1,19 +1,20 @@
 import React from 'react'
 import { HeaderContainer } from "./styled"
-
+import styled from "styled-components"
 
 class Header extends React.Component {
     render() {
     
     return (
         <HeaderContainer>
-            <h2>LabeNinjas</h2>
+            <h1>LabeNinjas</h1>
             <div>
-                <button onClick={this.props.irPaginaHome}>Home</button>
-                <button >Carrinho</button>
+                <button className ="botaoHeader" onClick={this.props.irPaginaHome}>Home</button>
+                <button className ="botaoHeader" >Carrinho</button>
             </div>
         </HeaderContainer>
     )
 }
 }
 export default Header
+
