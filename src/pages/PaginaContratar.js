@@ -68,7 +68,6 @@ export default class PaginaContratar extends Component {
             <h3>{trabalho.title}</h3>
             <p>{`Preço: R$ ${trabalho.price},00`}</p>
             <p>{`Prazo: ${this.props.converterData(trabalho.dueDate)}`}</p>
-
             <Botoes onClick={() => this.props.irPaginaDetalhes(trabalho.id)}>
               Ver detalhes
             </Botoes>

@@ -137,12 +137,10 @@ class App extends React.Component {
       })
       .then((response) => {
         this.setState({ detalhes: response.data });
-        /* this.setState({idJobs: id}) */
       })
       .catch((error) => {
         alert(error.message);
       });
-  };
 
   render() {
     return (

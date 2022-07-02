@@ -34,4 +34,3 @@ const ContainerInfo = styled.div `
 const Paragrafos = styled.p `
   margin: 12px;
 `;
-
