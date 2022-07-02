@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import styled from "styled-components"
+import styled from "styled-components";
 
 export default class PaginaPrestador extends Component {
   state = {
@@ -64,26 +64,26 @@ export default class PaginaPrestador extends Component {
         <CadastroServicos>
           <h1>Cadastre o seu serviço</h1>
 
-          <input
+          <Input
             value={this.state.cargo}
             onChange={this.pegaValorCargo}
             placeholder="Cargo"
           />
 
-          <input
+          <Input
             value={this.state.descricao}
             onChange={this.pegaValorDescricao}
             placeholder="Descrição"
           />
 
-          <input
+          <Input
             value={this.state.preco}
             onChange={this.pegaValorPreco}
             placeholder="Valor"
             type="number"
           />
 
-          <select
+          <Select
             multiple
             value={this.state.pagamento}
             onChange={this.pegaValorPagamento}
@@ -93,29 +93,42 @@ export default class PaginaPrestador extends Component {
             <option value="Pix">Pix</option>
             <option value="PayPal">PayPal</option>
             <option value="Boleto">Boleto</option>
-          </select>
+          </Select>
 
-          <input
+          <Input
             value={this.state.data}
             onChange={this.pegaValorData}
             type="date"
           />
 
-          <button className="botaoHeader" onClick={this.postJobs}>Enviar</button>
+          <button className="botaoHeader" onClick={this.postJobs}>
+            Enviar
+          </button>
 
-          <button className="botaoHeader" onClick={this.props.irPaginaHome}>Voltar</button>
+          <button className="botaoHeader" onClick={this.props.irPaginaHome}>
+            Voltar
+          </button>
         </CadastroServicos>
       </div>
     );
   }
-
 }
 
 const CadastroServicos = styled.div`
-display: flex;
-flex-direction: column;
-width: 100vw;
-height: 600px;
-gap: 8px;
-align-items: center;
-`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 60vh;
+  gap: 8px;
+  align-items: center;
+`;
+
+const Input = styled.input`
+  padding: 8px 26px;
+  border-radius: 10px;
+`;
+
+const Select = styled.select`
+  padding: 8px 46px;
+  border-radius: 10px;
+`;
