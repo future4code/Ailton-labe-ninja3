@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+Link do Surge: https://chilly-middle.surge.sh/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Estruturação do projeto 
 
-## Available Scripts
+![Fluxograma](https://user-images.githubusercontent.com/38039737/176336242-cdb1128a-525d-4f93-b82f-3c01908013df.png)
 
-In the project directory, you can run:
 
-### `npm start`
+Estrutura de acordo com as necessidades e solicitação do cliente.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Home**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Header**
 
-### `npm test`
+- Descrição
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Botão:**
 
-### `npm run build`
+- Voltar
+- Home
+- Logo
+- Carrinho
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**2 Botões**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Quero ser ninja
+- Contratar
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+‌
 
-### `npm run eject`
+**Página quero ser ninja**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Formulário de cadastro**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Título
+- Descrição
+- Preço
+- Método de pagamento
+- Campo de data ( prazo)
+- Botão cadastrar serviço
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Contratar ninja**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Valor mínimo
+- Valor máximo
+- Descrição do serviço
+- Ordenação ( filtro)
 
-## Learn More
+**Carrinho**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Botão remover
+- Botão finalizar compra
+- Botão para voltar para lista de serviço ( continuar comprando)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+‌Projeção e espectativa de como o projeto será entregue até a data pré estabelecida. 
 
-### Code Splitting
+![1](https://user-images.githubusercontent.com/38039737/176337032-8e033f3f-0988-465d-a3ba-856736454046.png)
+![2](https://user-images.githubusercontent.com/38039737/176337036-d6422d7e-2cc0-4cd4-9d18-5b8e15ad53e0.png)
+![3](https://user-images.githubusercontent.com/38039737/176337038-2d90edee-11dc-4a67-a238-91ecdffb82b6.png)
+![4](https://user-images.githubusercontent.com/38039737/176337040-294c0400-6470-4708-8f74-41d62d0422ca.png)
+![5](https://user-images.githubusercontent.com/38039737/176337041-87d7f63c-afee-4167-a383-b5d563202dc2.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+‌

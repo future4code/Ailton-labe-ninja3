@@ -1,38 +1,29 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.botao {
+    color: white;
+    background-color: #f4a261;
+    height: 40px;
+    width: 350px;
+    border-radius: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.botao:hover {
+    background-color: #f4a361a8;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.botaoHeader {
+    color: white;
+    background-color: #f4a261;
+    height: 40px;
+    width: 100px;
+    border-radius: 50px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.botaoHeader:hover {
+    background-color: #f4a361a8;
 }
